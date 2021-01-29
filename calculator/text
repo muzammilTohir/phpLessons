@@ -1,0 +1,18 @@
+create table posts(
+	id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    subject varchar(128) not null,
+    subject varchar(1000) not null,
+    date datetime not null
+);
+
+insert into posts(subject,content,date) values('This is the subject','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.','2015-11-14 16:38:01') ;
+
+select * from posts where id=1 and subject='This is the subject';
+
+update posts set subject = 'This is a subject', content='This is a content' where id = 1;
+
+delete from posts where id=1;
+
+select * from posts order by id asc;
+
+select * from posts order by id desc;
